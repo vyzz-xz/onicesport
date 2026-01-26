@@ -11,13 +11,15 @@ const config: Config = {
             colors: {
                 background: "#000000",
                 foreground: "#ededed",
-                primary: "#ffd700", // Gold placeholder
+                primary: "#ffd200", // Onic Yellow
                 secondary: "#1a1a1a",
                 accent: "#ff002e", // Red accent
             },
             fontFamily: {
                 heading: ["var(--font-figtree)"],
-                body: ["var(--font-inter)"],
+                body: ["var(--font-figtree)"],
+                sans: ["var(--font-figtree)"],
+                mono: ["var(--font-figtree)"],
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

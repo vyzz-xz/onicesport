@@ -37,14 +37,11 @@ export default function Preloader() {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-6xl md:text-9xl font-bold font-heading tracking-tighter uppercase"
+                            className="text-6xl md:text-9xl font-bold font-heading tracking-[-9] uppercase"
                         >
                             Onic
                             <span className="text-primary ml-4">Esport</span>
                         </motion.h1>
-                        <p className="font-mono text-sm uppercase tracking-widest text-neutral-400">
-                            Undefeated / Unstoppable
-                        </p>
                     </div>
 
                     <div className="absolute bottom-10 left-0 w-full px-10">

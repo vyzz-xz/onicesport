@@ -37,8 +37,8 @@ export default function DivisionBento() {
     return (
         <section className="py-32 bg-black px-6 md:px-10 relative z-10">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-5xl md:text-8xl font-heading font-black text-white uppercase mb-20 text-center">
-                    Our <span className="text-primary">Divisions</span>
+                <h2 className="text-5xl md:text-8xl font-figtree font-bold text-white tracking-[-8] uppercase mb-20 text-center">
+                    Our <span className="text-[#ffd200]">Divisions</span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -29,7 +29,7 @@ export default function SponsorMarquee() {
 
 function SponsorItem({ name }: { name: string }) {
     return (
-        <div className="mx-8 md:mx-12 flex items-center gap-6 text-white/30 font-heading text-4xl md:text-6xl font-black uppercase tracking-tighter hover:text-primary transition-colors duration-300 cursor-pointer">
+        <div className="mx-8 md:mx-12 flex items-center gap-6 text-white font-figtree text-4xl md:text-6xl font-black uppercase tracking-tighter hover:text-primary transition-colors duration-300 cursor-pointer">
             <span>{name}</span>
             {/* Divider Icon */}
             <span className="text-primary/50 text-2xl align-middle">✦</span>

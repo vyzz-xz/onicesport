@@ -4,15 +4,15 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const STATS = [
-    { label: "Tournaments Won", value: 45, suffix: "+" },
-    { label: "Matches Played", value: 1250, suffix: "" },
-    { label: "Global Ranking", value: 1, suffix: "#" }, // Special case for prefix/suffix
-    { label: "Fan Base", value: 12, suffix: "M+" },
+    { label: "Medal Win", value: 500, suffix: "+" },
+    { label: "Championship", value: 30, suffix: "+" },
+    { label: "Total Brands", value: 30, suffix: "+" }, // Special case for prefix/suffix
+    { label: "Years of the top", value: 6, suffix: "" },
 ];
 
 export default function StatsSection() {
     return (
-        <section className="py-32 bg-black text-white px-6 md:px-10">
+        <section className="py-32 bg-black text-[#ffd200] px-6 md:px-10">
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
                 {STATS.map((stat, i) => (
                     <StatItem key={i} {...stat} />
@@ -39,12 +39,12 @@ function StatItem({ label, value, suffix }: { label: string, value: number, suff
     // Format number for display
     return (
         <div ref={ref} className="flex flex-col items-center gap-2">
-            <div className="flex items-baseline font-heading font-black text-5xl md:text-8xl text-primary">
+            <div className="flex items-baseline font-figtree font-bold text-5xl md:text-8xl text-primary">
                 {suffix === "#" && <span className="text-4xl md:text-6xl mr-1">#</span>}
                 <NumberDisplay value={springValue} />
                 {suffix !== "#" && <span className="text-3xl md:text-5xl ml-1">{suffix}</span>}
             </div>
-            <p className="text-neutral-500 font-mono text-sm tracking-widest uppercase">{label}</p>
+            <p className="text-white font-figtree text-sm md:text-xl tracking-[-1] uppercase">{label}</p>
         </div>
     )
 }

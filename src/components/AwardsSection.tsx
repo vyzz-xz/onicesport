@@ -25,10 +25,10 @@ export default function AwardsSection() {
             <div className="absolute bottom-0 left-0 w-full h-[500px] bg-gradient-to-t from-black to-transparent z-10" />
 
             <div className="relative z-20 text-center mb-16 px-6">
-                <h2 className="text-5xl md:text-8xl font-heading font-black text-white uppercase">
-                    Hall of <span className="text-primary">Fame</span>
+                <h2 className="text-5xl md:text-8xl font-figtree font-bold text-white uppercase">
+                    Hall of <span className="text-[#ffd200]">Fame</span>
                 </h2>
-                <p className="text-neutral-400 font-mono mt-4">Our Legacy of Victory</p>
+                <p className="text-sm md:text-xl text-white font-figtree mt-4">Our Legacy of Victory</p>
             </div>
 
             <Swiper
@@ -46,10 +46,10 @@ export default function AwardsSection() {
                 }}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 modules={[EffectCoverflow, Pagination, Autoplay]}
-                className="w-full h-[500px]"
+                className="w-full h-[700px]"
             >
                 {AWARDS.map((award, i) => (
-                    <SwiperSlide key={i} className="w-[300px] md:w-[400px] bg-neutral-900 rounded-3xl border border-white/10 overflow-hidden flex flex-col">
+                    <SwiperSlide key={i} className="w-[300px] md:w-[400px] bg-neutral-900 rounded-xl border border-white/10 overflow-hidden flex flex-col">
                         <div className="h-2/3 bg-neutral-800 relative flex items-center justify-center group overflow-hidden">
                             {/* Award Image */}
                             <Image
@@ -62,7 +62,7 @@ export default function AwardsSection() {
                             <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
                         <div className="flex-1 p-8 flex flex-col justify-center bg-neutral-900 text-white">
-                            <span className="text-primary font-mono text-sm">{award.year}</span>
+                            <span className="text-primary font-figtree text-sm">{award.year}</span>
                             <h3 className="text-2xl font-bold font-heading uppercase">{award.title}</h3>
                             <p className="text-neutral-500">{award.description}</p>
                         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree, Inter } from "next/font/google";
+import { Figtree } from "next/font/google"; // Removed Inter
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { cn } from "@/lib/utils";
@@ -7,12 +7,6 @@ import { cn } from "@/lib/utils";
 const figtree = Figtree({
   subsets: ["latin"],
   variable: "--font-figtree",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
   display: "swap",
 });
 
@@ -32,8 +26,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={cn(
           "min-h-screen bg-black font-body text-foreground antialiased selection:bg-primary selection:text-black",
-          figtree.variable,
-          inter.variable
+          figtree.variable
         )}>
         <SmoothScroll>
           {children}

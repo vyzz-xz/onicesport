@@ -179,14 +179,6 @@ export default function SequenceScroll() {
                 <div className="relative z-10 w-full h-full pointer-events-none">
                     <ScrollOverlay progress={currentIndex} />
                 </div>
-
-                {/* Scroll CTA */}
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none mix-blend-difference">
-                    <span className="text-xs font-mono uppercase tracking-widest text-white/50">Scroll to Explore</span>
-                    <div className="w-[1px] h-10 bg-white/20 animate-pulse relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-full bg-white animate-marquee-reverse" />
-                    </div>
-                </div>
             </div>
         </div>
     );
@@ -211,12 +203,6 @@ function ScrollOverlay({ progress }: { progress: any }) {
                 "transition-opacity duration-700 ease-out flex flex-col items-center text-center",
                 step === 0 ? "opacity-100" : "opacity-0 hidden"
             )}>
-                <h2 className="text-5xl md:text-8xl font-heading font-black tracking-tight text-white uppercase mb-4">
-                    Dominance <br /> <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary to-yellow-600">Defined</span>
-                </h2>
-                <p className="max-w-md text-neutral-400 font-mono text-sm leading-relaxed">
-                    We don't just play the game. We rewrite the rules.
-                </p>
             </div>
 
             {/* Step 1: Left Align */}
@@ -224,12 +210,9 @@ function ScrollOverlay({ progress }: { progress: any }) {
                 "transition-opacity duration-700 ease-out flex flex-col items-start text-left ml-10",
                 step === 1 ? "opacity-100" : "opacity-0 hidden"
             )}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-white uppercase mb-4 leading-[0.9]">
-                    Precision <br /> <span className="text-neutral-500">Exec</span>
+                <h2 className="text-4xl md:text-7xl font-heading font-bold text-white tracking-[-5] uppercase mb-4 leading-[0.8]">
+                    Precision <br /> <span className="text-[#ffd200]">Exec</span>
                 </h2>
-                <p className="max-w-sm text-neutral-400 font-mono text-sm border-l-2 border-primary pl-4">
-                    Every move calculated. Every strike fatal.
-                </p>
             </div>
 
             {/* Step 2: Right Align */}
@@ -237,12 +220,9 @@ function ScrollOverlay({ progress }: { progress: any }) {
                 "transition-opacity duration-700 ease-out flex flex-col items-end text-right mr-10",
                 step === 2 ? "opacity-100" : "opacity-0 hidden"
             )}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-white uppercase mb-4 leading-[0.9]">
-                    Global <br /> <span className="text-neutral-500">Icons</span>
+                <h2 className="text-4xl md:text-7xl font-heading font-bold text-white tracking-[-5] uppercase mb-4 leading-[0.8]">
+                    Global <br /> <span className="text-[#ffd200]">Icons</span>
                 </h2>
-                <p className="max-w-sm text-neutral-400 font-mono text-sm border-r-2 border-primary pr-4">
-                    From local heroes to world champions.
-                </p>
             </div>
 
         </div>

@@ -19,7 +19,7 @@ export default function AboutSection() {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-screen bg-black text-white py-20 overflow-hidden flex flex-col items-center justify-center"
+            className="relative min-h-screen font-figtree bg-black text-white py-20 overflow-hidden flex flex-col items-center justify-center"
         >
             <motion.div
                 style={{ width }}
@@ -42,8 +42,10 @@ export default function AboutSection() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
                         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10">
-                            <h3 className="text-4xl md:text-6xl font-heading font-black text-white uppercase tracking-tighter text-center">Onic Esports</h3>
-                            <div className="px-6 py-2 border border-primary/30 rounded-full text-primary text-xs font-mono uppercase tracking-widest backdrop-blur-sm bg-black/50">
+                            <h3 className="text-4xl md:text-6xl font-figtree font-bold text-white uppercase tracking-tighter text-center">
+                                Onic <span className="text-[#FFD200]">Esports</span>
+                            </h3>
+                                <div className="px-6 py-2 border border-primary/30 rounded-full text-primary text-xs font-figtree uppercase tracking-widest backdrop-blur-sm bg-black/50">
                                 Legacy In The Making
                             </div>
                         </div>
@@ -52,7 +54,7 @@ export default function AboutSection() {
                     <AnimatedText text={PHRASE_2} progress={scrollYProgress} start={0.5} end={0.8} />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full text-lg text-neutral-400 font-body leading-relaxed" suppressHydrationWarning>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full text-lg text-white font-figtree leading-relaxed" suppressHydrationWarning>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +100,7 @@ function AnimatedText({ text, progress, start, end }: { text: string, progress: 
 function Word({ word, progress, range }: { word: string, progress: any, range: [number, number] }) {
     const opacity = useTransform(progress, range, [0.1, 1]);
     return (
-        <motion.span style={{ opacity }} className="relative text-4xl md:text-7xl font-heading font-black text-white uppercase leading-none mr-4 last:mr-0">
+        <motion.span style={{ opacity }} className="relative text-4xl md:text-7xl font-figtree font-black text-white uppercase leading-none mr-4 last:mr-0">
             {word}
         </motion.span>
     )
