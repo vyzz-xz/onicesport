@@ -101,16 +101,12 @@ function BentoCard({ title, desc, className, image }: { title: string, desc: str
             />
 
             {/* Animated Grid Background */}
-            <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-10 transition-opacity duration-500">
+            <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-10 transition-opacity duration-500 cursor-pointer">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             </div>
 
-            <div className="relative z-20">
-                {/* Icon */}
-                <div className="size-12 rounded-full border border-white/50 flex items-center justify-center mb-4 group-hover:bg-[#ffd200] group-hover:scale-110 group-hover:border-primary transition-all duration-300 text-white group-hover:text-black cursor-pointer" suppressHydrationWarning>
-                    <span className="text-xl">↗</span>
-                </div>
+            <div className="relative z-20 cursor-pointer">
                 <h3 className="text-3xl font-heading font-bold text-white uppercase mb-2 tracking-tighter group-hover:text-primary transition-colors">{title}</h3>
                 <p className="text-neutral-400 font-figtree text-sm max-w-[80%]">{desc}</p>
             </div>
