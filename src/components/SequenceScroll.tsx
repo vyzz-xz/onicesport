@@ -198,20 +198,13 @@ function ScrollOverlay({ progress }: { progress: any }) {
     // Only showing if valid step
     return (
         <div className="absolute inset-0 pointer-events-none flex flex-col justify-center px-6 md:px-20">
-            {/* Step 0: Center Title */}
-            <div className={cn(
-                "transition-opacity duration-700 ease-out flex flex-col items-center text-center",
-                step === 0 ? "opacity-100" : "opacity-0 hidden"
-            )}>
-            </div>
-
             {/* Step 1: Left Align */}
             <div className={cn(
                 "transition-opacity duration-700 ease-out flex flex-col items-start text-left ml-10",
                 step === 1 ? "opacity-100" : "opacity-0 hidden"
             )}>
                 <h2 className="text-4xl md:text-7xl font-heading font-bold text-white tracking-[-5] uppercase mb-4 leading-[0.8]">
-                    Precision <br /> <span className="text-[#ffd200]">Exec</span>
+                    King Of <br /> <span className="text-[#ffd200]">The Sky</span>
                 </h2>
             </div>
 
@@ -221,7 +214,7 @@ function ScrollOverlay({ progress }: { progress: any }) {
                 step === 2 ? "opacity-100" : "opacity-0 hidden"
             )}>
                 <h2 className="text-4xl md:text-7xl font-heading font-bold text-[#ffd200] tracking-[-5] uppercase mb-4 leading-[0.8]">
-                    Global <br /> <span className="text-white">Icons</span>
+                    #Sonic <br /> <span className="text-white">Republic</span>
                 </h2>
             </div>
 

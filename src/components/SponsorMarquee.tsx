@@ -6,7 +6,7 @@ const SPONSORS = [
 
 export default function SponsorMarquee() {
     return (
-        <section className="py-24 bg-black border-y border-white/10 overflow-hidden relative z-10">
+        <section className="py-24 bg-black border-y border-white/10 overflow-hidden relative z-10 md:mt-20">
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent pointer-events-none z-20" />
             <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent pointer-events-none z-20" />
 

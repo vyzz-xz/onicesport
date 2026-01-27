@@ -47,9 +47,9 @@ const GAMES = [
 
 export default function DivisionBento() {
     return (
-        <section className="py-32 bg-black px-6 md:px-10 relative z-10">
+        <section className="py-32 bg-black px-6 md:px-10 relative z-10 md:mt-10 ">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-5xl md:text-8xl font-figtree font-bold text-white tracking-[-8] uppercase mb-20 text-center">
+                <h2 className="text-5xl md:text-8xl font-figtree font-bold text-white tracking-[-2] md:tracking-[-8] uppercase mb-20 text-center">
                     Our <span className="text-[#ffd200]">Divisions</span>
                 </h2>
 
@@ -105,7 +105,7 @@ function BentoCard({ title, desc, className, image }: { title: string, desc: str
 
             <div className="relative z-20">
                 {/* Icon */}
-                <div className="size-12 rounded-full border border-white/50 flex items-center justify-center mb-4 group-hover:bg-[#ffd200] group-hover:scale-110 group-hover:border-primary transition-all duration-300 text-white group-hover:text-black" suppressHydrationWarning>
+                <div className="size-12 rounded-full border border-white/50 flex items-center justify-center mb-4 group-hover:bg-[#ffd200] group-hover:scale-110 group-hover:border-primary transition-all duration-300 text-white group-hover:text-black cursor-pointer" suppressHydrationWarning>
                     <span className="text-xl">↗</span>
                 </div>
                 <h3 className="text-3xl font-heading font-black text-white uppercase mb-2 tracking-tighter group-hover:text-primary transition-colors">{title}</h3>

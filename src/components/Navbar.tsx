@@ -43,12 +43,12 @@ export default function Navbar() {
         <>
             <header className="fixed top-0 left-0 w-full z-40 px-6 py-6 md:px-10 flex justify-between items-center mix-blend-difference text-white">
                 <div className="font-heading font-black text-2xl tracking-tighter uppercase relative z-50">
-                    Onic Esport.
+                    Onic <span className="text-[#ffd200]">Esport.</span>
                 </div>
 
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="relative z-50 flex flex-col gap-1.5 w-10 group"
+                    className="relative z-5 0 flex flex-col gap-1.5 w-10 group"
                 >
                     <span className={cn("block w-full h-[2px] bg-white transition-transform duration-300", isOpen && "rotate-45 translate-y-2")} />
                     <span className={cn("block w-full h-[2px] bg-white transition-opacity duration-300", isOpen && "opacity-0")} />

@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Image from "next/image";
 
 const PHRASE_1 = "WE ARE THE KINGS OF THE LAND OF DAWN";
-const PHRASE_2 = "DOMINATING EVERY BATTLEFIELD";
+const PHRASE_2 = "DOMINATE THE BATTLE";
 
 export default function AboutSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -19,7 +19,7 @@ export default function AboutSection() {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-screen font-figtree bg-black text-white py-20 overflow-hidden flex flex-col items-center justify-center"
+            className="relative min-h-screen font-figtree bg-black text-white py-32 overflow-hidden flex flex-col items-center justify-center"
         >
             <motion.div
                 style={{ width }}
@@ -31,37 +31,34 @@ export default function AboutSection() {
 
                     <motion.div
                         style={{ opacity: useTransform(scrollYProgress, [0.3, 0.5], [0, 1]) }}
-                        className="my-10 w-full h-[250px] md:h-[500px] relative rounded-3xl overflow-hidden border border-white/10 bg-neutral-900/50"
+                        className="my-10 w-full h-[250px] md:h-[500px] relative rounded-3xl overflow-hidden border border-white/20 bg-neutral-900/50"
                     >
                         <Image
                             src="/artifacts/profile.png"
                             alt="Onic Esports Arena"
                             fill
-                            className="object-cover opacity-80 group-hover:scale-120 transition-transform duration-700"
+                            className="object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
                         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10">
-                            <h3 className="text-4xl md:text-6xl font-figtree font-bold text-white uppercase tracking-tighter text-center">
+                            <h3 className="text-5xl md:text-8xl font-figtree font-bold text-white uppercase tracking-tighter text-center">
                                 Onic <span className="text-[#FFD200]">ID</span>
                             </h3>
-                            <div className="px-6 py-2 border border-primary/30 rounded-full text-primary text-xs font-figtree uppercase tracking-widest backdrop-blur-sm bg-black/50">
-                                Legacy In The Making
-                            </div>
                         </div>
                     </motion.div>
 
-                    <AnimatedText text={PHRASE_2} progress={scrollYProgress} start={0.5} end={0.8} className="text-[#ffd200] font-figtree font-bold" />
+                    <AnimatedText text={PHRASE_2} progress={scrollYProgress} start={0.5} end={0.8} className="text-[#ffd200] font-figtree font-bold text-2xl md:mt-20" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full text-lg text-white font-figtree leading-relaxed" suppressHydrationWarning>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-20 w-full text-1xl md:text-xl text-justify text-white font-figtree leading-relaxed" suppressHydrationWarning>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        Established In 2018, <span className="text-[#ffd200]">ONIC ESPORT</span> Has Rapidly Ascended To Become One Of Southeast Asia's Premier Esport Organizations. Driven By Passion And a Relentless Pursuit Of Victory.
+                        A Leading Indonesian Esports organization With <span className="text-[#ffd200]">MULTIPLE CHAMPION TITLES</span> To Establish Footprint And To Be The Highest Benchmark E-sports & Sports Organization In The Region.
                     </motion.p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -69,7 +66,7 @@ export default function AboutSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        We Cultivate <span className="text-[#ffd200]">CHAMPIONS</span> Across Multiple Titles, Creating A Legacy That Reserves Its Place In History. <span className="text-[#ffd200]">#GOONIC</span>
+                        ONIC was Founded in 2018, started its footstep as a professional e-sports Organization, we aim to be the best e-sports organization to represent South East Asia by managing talents and make them the best version of theirself. <span className="text-[#ffd200]">#GOONIC</span>
                     </motion.p>
                 </div>
 

@@ -12,23 +12,23 @@ import Image from "next/image";
 
 const AWARDS = [
     { title: "MPL ID S12", description: "Champions", year: "2023", image: "/artifacts/game-ff.jpg" },
-    { title: "MSC", description: "Champions", year: "2023", image: "/artifacts/game-ff.jpg" },
-    { title: "MPL ID S11", description: "Champions", year: "2023", image: "/artifacts/game-ff.jpg" },
-    { title: "MPL I D S10", description: "Champions", year: "2022", image: "/artifacts/game-ff.jpg" },
+    { title: "MSC", description: "Champions", year: "2023", image: "/artifacts/game-hok.jpg" },
+    { title: "MPL ID S11", description: "Champions", year: "2023", image: "/artifacts/game-apex.jpg" },
+    { title: "MPL I D S10", description: "Champions", year: "2022", image: "/artifacts/game-cod.jpg" },
     { title: "M4 World Champ", description: "Runner Up", year: "2022", image: "/artifacts/game-ff.jpg" },
 ];
 
 export default function AwardsSection() {
     return (
-        <section className="py-32 bg-neutral-950 overflow-hidden relative">
+        <section className="py-20 md:py-32 bg-neutral-950 overflow-hidden relative">
             <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-black to-transparent z-10" />
             <div className="absolute bottom-0 left-0 w-full h-[500px] bg-gradient-to-t from-black to-transparent z-10" />
 
-            <div className="relative z-20 text-center mb-16 px-6">
+            <div className="relative z-20 text-center mb-24 px-6">
                 <h2 className="text-5xl md:text-8xl font-figtree font-bold text-white uppercase">
                     Hall of <span className="text-[#ffd200]">Fame</span>
                 </h2>
-                <p className="text-sm md:text-xl text-white font-figtree mt-4">Our Legacy of Victory</p>
+                <p className="text-sm md:text-xl text-white font-figtree uppercase mt-4">Our Legacy of Victory</p>
             </div>
 
             <Swiper
@@ -46,10 +46,10 @@ export default function AwardsSection() {
                 }}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 modules={[EffectCoverflow, Pagination, Autoplay]}
-                className="w-full h-[700px]"
+                className="w-[500px] h-[350px] md:w-[1000px] md:h-[700px]"
             >
                 {AWARDS.map((award, i) => (
-                    <SwiperSlide key={i} className="w-[300px] md:w-[400px] bg-neutral-900 rounded-xl border border-white/10 overflow-hidden flex flex-col">
+                    <SwiperSlide key={i} className="w-[200px] md:w-[400px] bg-neutral-900 rounded-xl border border-white/10 overflow-hidden flex flex-col">
                         <div className="h-2/3 bg-neutral-800 relative flex items-center justify-center group overflow-hidden">
                             {/* Award Image */}
                             <Image

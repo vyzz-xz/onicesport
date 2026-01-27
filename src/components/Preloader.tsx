@@ -39,8 +39,7 @@ export default function Preloader() {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-5xl md:text-9xl font-bold font-heading tracking-[-3] md:tracking-[-9] uppercase"
                         >
-                            Onic
-                            <span className="text-[#ffd200] ml-4">Esport</span>
+                            Loading
                         </motion.h1>
                     </div>
 
@@ -51,7 +50,7 @@ export default function Preloader() {
                         </div>
                         <div className="w-full h-[2px] bg-neutral-900 rounded-full overflow-hidden">
                             <motion.div
-                                className="h-full bg-white"
+                                className="h-full bg-[#ffd200]"
                                 style={{ width: `${progress}%` }}
                             />
                         </div>
