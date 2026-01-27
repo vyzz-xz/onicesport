@@ -37,15 +37,15 @@ export default function Preloader() {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-6xl md:text-9xl font-bold font-heading tracking-[-9] uppercase"
+                            className="text-5xl md:text-9xl font-bold font-heading tracking-[-3] md:tracking-[-9] uppercase"
                         >
                             Onic
-                            <span className="text-primary ml-4">Esport</span>
+                            <span className="text-[#ffd200] ml-4">Esport</span>
                         </motion.h1>
                     </div>
 
                     <div className="absolute bottom-10 left-0 w-full px-10">
-                        <div className="flex justify-between items-end mb-2 font-mono text-xs uppercase text-neutral-500">
+                        <div className="flex justify-between items-end mb-2 font-figtree text-xs uppercase text-neutral-500">
                             <span>Loading Assets</span>
                             <span>{Math.round(progress)}%</span>
                         </div>

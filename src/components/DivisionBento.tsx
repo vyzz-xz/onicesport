@@ -10,26 +10,38 @@ const GAMES = [
     {
         title: "Mobile Legends",
         desc: "MPL ID Champions. M-Series Contenders.",
-        col: "md:col-span-2",
-        image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop"
+        col: "md:col-span-1",
+        image: "/artifacts/game_mlbb_1769169559079.png"
     },
     {
         title: "PUBG Mobile",
         desc: "Winner Winner Chicken Dinner.",
         col: "md:col-span-1",
-        image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=2070&auto=format&fit=crop"
+        image: "/artifacts/game_pubg_1769169580136.png"
     },
     {
         title: "Free Fire",
         desc: "Survivors Ready.",
         col: "md:col-span-1",
-        image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=2047&auto=format&fit=crop"
+        image: "/artifacts/game-ff.jpg"
     },
     {
-        title: "Talent",
+        title: "Call Of Duty",
         desc: "Content Creators & Influencers.",
-        col: "md:col-span-2",
-        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop"
+        col: "md:col-span-1",
+        image: "/artifacts/game-cod.jpg"
+    },
+    {
+        title: "Apex Legends",
+        desc: "Content Creators & Influencers.",
+        col: "md:col-span-1",
+        image: "/artifacts/game-apex.jpg"
+    },
+    {
+        title: "Honor Of Kings",
+        desc: "Content Creators & Influencers.",
+        col: "md:col-span-1",
+        image: "/artifacts/game-hok.jpg"
     },
 ];
 
@@ -75,7 +87,7 @@ function BentoCard({ title, desc, className, image }: { title: string, desc: str
                     src={image}
                     alt={title}
                     fill
-                    className="object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
+                    className="object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
             </div>
@@ -83,15 +95,6 @@ function BentoCard({ title, desc, className, image }: { title: string, desc: str
             {/* Hover Gradient Effect */}
             <motion.div
                 className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100 rounded-3xl z-10"
-                style={{
-                    background: useMotionTemplate`
-                        radial-gradient(
-                            650px circle at ${mouseX}px ${mouseY}px,
-                            rgba(255, 215, 0, 0.1),
-                            transparent 80%
-                        )
-                    `,
-                }}
             />
 
             {/* Animated Grid Background */}
@@ -102,11 +105,11 @@ function BentoCard({ title, desc, className, image }: { title: string, desc: str
 
             <div className="relative z-20">
                 {/* Icon */}
-                <div className="size-12 rounded-full border border-white/20 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 group-hover:border-primary transition-all duration-300 text-white group-hover:text-black" suppressHydrationWarning>
+                <div className="size-12 rounded-full border border-white/50 flex items-center justify-center mb-4 group-hover:bg-[#ffd200] group-hover:scale-110 group-hover:border-primary transition-all duration-300 text-white group-hover:text-black" suppressHydrationWarning>
                     <span className="text-xl">↗</span>
                 </div>
                 <h3 className="text-3xl font-heading font-black text-white uppercase mb-2 tracking-tighter group-hover:text-primary transition-colors">{title}</h3>
-                <p className="text-neutral-400 font-body text-sm max-w-[80%]">{desc}</p>
+                <p className="text-neutral-400 font-figtree text-sm max-w-[80%]">{desc}</p>
             </div>
         </div>
     )

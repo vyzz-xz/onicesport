@@ -220,8 +220,8 @@ function ScrollOverlay({ progress }: { progress: any }) {
                 "transition-opacity duration-700 ease-out flex flex-col items-end text-right mr-10",
                 step === 2 ? "opacity-100" : "opacity-0 hidden"
             )}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-white tracking-[-5] uppercase mb-4 leading-[0.8]">
-                    Global <br /> <span className="text-[#ffd200]">Icons</span>
+                <h2 className="text-4xl md:text-7xl font-heading font-bold text-[#ffd200] tracking-[-5] uppercase mb-4 leading-[0.8]">
+                    Global <br /> <span className="text-white">Icons</span>
                 </h2>
             </div>
 

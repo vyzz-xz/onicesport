@@ -11,11 +11,11 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 const AWARDS = [
-    { title: "MPL ID S12", description: "Champions", year: "2023", image: "https://images.unsplash.com/photo-1565514020176-892eb1036e67?q=80&w=1000&auto=format&fit=crop" },
-    { title: "MSC", description: "Champions", year: "2023", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop" },
-    { title: "MPL ID S11", description: "Champions", year: "2023", image: "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=2070&auto=format&fit=crop" },
-    { title: "MPL I D S10", description: "Champions", year: "2022", image: "https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=2071&auto=format&fit=crop" },
-    { title: "M4 World Champ", description: "Runner Up", year: "2022", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop" },
+    { title: "MPL ID S12", description: "Champions", year: "2023", image: "/artifacts/game-ff.jpg" },
+    { title: "MSC", description: "Champions", year: "2023", image: "/artifacts/game-ff.jpg" },
+    { title: "MPL ID S11", description: "Champions", year: "2023", image: "/artifacts/game-ff.jpg" },
+    { title: "MPL I D S10", description: "Champions", year: "2022", image: "/artifacts/game-ff.jpg" },
+    { title: "M4 World Champ", description: "Runner Up", year: "2022", image: "/artifacts/game-ff.jpg" },
 ];
 
 export default function AwardsSection() {

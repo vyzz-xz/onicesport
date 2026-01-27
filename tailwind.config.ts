@@ -20,6 +20,7 @@ const config: Config = {
                 body: ["var(--font-figtree)"],
                 sans: ["var(--font-figtree)"],
                 mono: ["var(--font-figtree)"],
+                figtree: ["var(--font-figtree)"],
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

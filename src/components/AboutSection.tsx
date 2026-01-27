@@ -27,31 +27,31 @@ export default function AboutSection() {
             >
                 <div className="text-center">
                     <h2 className="sr-only">About Onic</h2>
-                    <AnimatedText text={PHRASE_1} progress={scrollYProgress} start={0.1} end={0.4} />
+                    <AnimatedText text={PHRASE_1} progress={scrollYProgress} start={0.1} end={0.4} className="text-[#ffd200] font-figtree font-bold md:tracking-[-3] text-2xl" />
 
                     <motion.div
                         style={{ opacity: useTransform(scrollYProgress, [0.3, 0.5], [0, 1]) }}
-                        className="my-10 w-full h-[300px] md:h-[500px] relative rounded-3xl overflow-hidden border border-white/10 bg-neutral-900/50"
+                        className="my-10 w-full h-[250px] md:h-[500px] relative rounded-3xl overflow-hidden border border-white/10 bg-neutral-900/50"
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop"
+                            src="/artifacts/profile.png"
                             alt="Onic Esports Arena"
                             fill
-                            className="object-cover opacity-60 hover:scale-105 transition-transform duration-700"
+                            className="object-cover opacity-80 group-hover:scale-120 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
                         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10">
                             <h3 className="text-4xl md:text-6xl font-figtree font-bold text-white uppercase tracking-tighter text-center">
-                                Onic <span className="text-[#FFD200]">Esports</span>
+                                Onic <span className="text-[#FFD200]">ID</span>
                             </h3>
-                                <div className="px-6 py-2 border border-primary/30 rounded-full text-primary text-xs font-figtree uppercase tracking-widest backdrop-blur-sm bg-black/50">
+                            <div className="px-6 py-2 border border-primary/30 rounded-full text-primary text-xs font-figtree uppercase tracking-widest backdrop-blur-sm bg-black/50">
                                 Legacy In The Making
                             </div>
                         </div>
                     </motion.div>
 
-                    <AnimatedText text={PHRASE_2} progress={scrollYProgress} start={0.5} end={0.8} />
+                    <AnimatedText text={PHRASE_2} progress={scrollYProgress} start={0.5} end={0.8} className="text-[#ffd200] font-figtree font-bold" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full text-lg text-white font-figtree leading-relaxed" suppressHydrationWarning>
@@ -61,7 +61,7 @@ export default function AboutSection() {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        ESTABLISHED IN 2018, ONIC ESPORTS HAS RAPIDLY ASCENDED TO BECOME ONE OF SOUTHEAST ASIA'S PREMIER ESPORTS ORGANIZATIONS. DRIVEN BY PASSION AND A RELENTLESS PURSUIT OF VICTORY.
+                        Established In 2018, <span className="text-[#ffd200]">ONIC ESPORT</span> Has Rapidly Ascended To Become One Of Southeast Asia's Premier Esport Organizations. Driven By Passion And a Relentless Pursuit Of Victory.
                     </motion.p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function AboutSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        WE CULTIVATE CHAMPIONS ACROSS MULTIPLE TITLES, CREATING A LEGACY THAT RESERVES ITS PLACE IN HISTORY. #GOONIC
+                        We Cultivate <span className="text-[#ffd200]">CHAMPIONS</span> Across Multiple Titles, Creating A Legacy That Reserves Its Place In History. <span className="text-[#ffd200]">#GOONIC</span>
                     </motion.p>
                 </div>
 
@@ -78,7 +78,7 @@ export default function AboutSection() {
     );
 }
 
-function AnimatedText({ text, progress, start, end }: { text: string, progress: any, start: number, end: number }) {
+function AnimatedText({ text, progress, start, end, className }: { text: string, progress: any, start: number, end: number, className?: string }) {
     const words = text.split(" ");
 
     // Calculate trigger points for each character would be complex, doing per word/char simple opacity
@@ -90,17 +90,17 @@ function AnimatedText({ text, progress, start, end }: { text: string, progress: 
                 const wordEnd = wordStart + step;
 
                 return (
-                    <Word key={i} word={word} progress={progress} range={[wordStart, wordEnd]} />
+                    <Word key={i} word={word} progress={progress} range={[wordStart, wordEnd]} className={className} />
                 )
             })}
         </p>
     )
 }
 
-function Word({ word, progress, range }: { word: string, progress: any, range: [number, number] }) {
+function Word({ word, progress, range, className }: { word: string, progress: any, range: [number, number], className?: string }) {
     const opacity = useTransform(progress, range, [0.1, 1]);
     return (
-        <motion.span style={{ opacity }} className="relative text-4xl md:text-7xl font-figtree font-black text-white uppercase leading-none mr-4 last:mr-0">
+        <motion.span style={{ opacity }} className={`relative text-4xl md:text-7xl font-figtree font-black uppercase leading-none mr-4 last:mr-0 ${className ? className : 'text-white'}`}>
             {word}
         </motion.span>
     )
