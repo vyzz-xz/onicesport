@@ -203,7 +203,7 @@ function ScrollOverlay({ progress }: { progress: any }) {
                 "transition-opacity duration-700 ease-out flex flex-col items-start text-left ml-10",
                 step === 1 ? "opacity-100" : "opacity-0 hidden"
             )}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-white tracking-[-5] uppercase mb-4 leading-[0.8]">
+                <h2 className="text-4xl md:text-7xl font-heading font-bold text-white tracking-[-5] uppercase italic mb-4 leading-[0.8]">
                     King Of <br /> <span className="text-[#ffd200]">The Sky</span>
                 </h2>
             </div>
@@ -213,7 +213,7 @@ function ScrollOverlay({ progress }: { progress: any }) {
                 "transition-opacity duration-700 ease-out flex flex-col items-end text-right mr-10",
                 step === 2 ? "opacity-100" : "opacity-0 hidden"
             )}>
-                <h2 className="text-4xl md:text-7xl font-heading font-bold text-[#ffd200] tracking-[-5] uppercase mb-4 leading-[0.8]">
+                <h2 className="text-4xl md:text-7xl font-heading font-bold text-[#ffd200] tracking-[-5] uppercase italic mb-4 leading-[0.8]">
                     #Sonic <br /> <span className="text-white">Republic</span>
                 </h2>
             </div>

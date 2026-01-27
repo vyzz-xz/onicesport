@@ -3,6 +3,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import FadeIn from "./FadeIn";
 
 const PHRASE_1 = "WE ARE THE KINGS OF THE LAND OF DAWN";
 const PHRASE_2 = "DOMINATE THE BATTLE";
@@ -39,7 +40,7 @@ export default function AboutSection() {
                             fill
                             className="object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
 
                         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10">
                             <h3 className="text-5xl md:text-8xl font-figtree font-bold text-white uppercase tracking-tighter text-center">
@@ -52,22 +53,16 @@ export default function AboutSection() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20 w-full text-1xl md:text-xl text-justify text-white font-figtree leading-relaxed" suppressHydrationWarning>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        A Leading Indonesian Esports organization With <span className="text-[#ffd200]">MULTIPLE CHAMPION TITLES</span> To Establish Footprint And To Be The Highest Benchmark E-sports & Sports Organization In The Region.
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        ONIC was Founded in 2018, started its footstep as a professional e-sports Organization, we aim to be the best e-sports organization to represent South East Asia by managing talents and make them the best version of theirself. <span className="text-[#ffd200]">#GOONIC</span>
-                    </motion.p>
+                    <FadeIn delay={0.2}>
+                        <p>
+                            A Leading Indonesian Esports organization With <span className="text-[#ffd200]">MULTIPLE CHAMPION TITLES</span> To Establish Footprint And To Be The Highest Benchmark E-sports & Sports Organization In The Region, Supported By The Relentless Energy Of Our Loyal Fanbase.
+                        </p>
+                    </FadeIn>
+                    <FadeIn delay={0.4}>
+                        <p>
+                            <span className="text-[#ffd200]">ONIC</span> was Founded in 2018, started its footstep as a professional e-sports Organization, we aim to be the best e-sports organization to represent South East Asia by managing talents and make them the best version of theirself. <span className="text-[#ffd200]">#GOONIC</span>
+                        </p>
+                    </FadeIn>
                 </div>
 
             </motion.div>

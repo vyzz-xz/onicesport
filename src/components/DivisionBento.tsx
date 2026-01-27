@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { cn } from "@/lib/utils";
+import FadeIn from "./FadeIn";
 
 import Image from "next/image";
 
@@ -27,19 +28,19 @@ const GAMES = [
     },
     {
         title: "Call Of Duty",
-        desc: "Content Creators & Influencers.",
+        desc: "Stay Frosty, Soldiers.",
         col: "md:col-span-1",
         image: "/artifacts/game-cod.jpg"
     },
     {
         title: "Apex Legends",
-        desc: "Content Creators & Influencers.",
+        desc: "Legends Change the Game.",
         col: "md:col-span-1",
         image: "/artifacts/game-apex.jpg"
     },
     {
         title: "Honor Of Kings",
-        desc: "Content Creators & Influencers.",
+        desc: "Forging Glory in the Gorge.",
         col: "md:col-span-1",
         image: "/artifacts/game-hok.jpg"
     },
@@ -55,7 +56,9 @@ export default function DivisionBento() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {GAMES.map((game, i) => (
-                        <BentoCard key={i} title={game.title} desc={game.desc} className={game.col} image={game.image} />
+                        <FadeIn key={i} delay={i * 0.1} className={game.col}>
+                            <BentoCard title={game.title} desc={game.desc} image={game.image} />
+                        </FadeIn>
                     ))}
                 </div>
             </div>
@@ -87,9 +90,9 @@ function BentoCard({ title, desc, className, image }: { title: string, desc: str
                     src={image}
                     alt={title}
                     fill
-                    className="object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
+                    className="object-cover opacity-40 group-hover:opacity-60 group-hover:scale-115 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
             </div>
 
             {/* Hover Gradient Effect */}
@@ -108,7 +111,7 @@ function BentoCard({ title, desc, className, image }: { title: string, desc: str
                 <div className="size-12 rounded-full border border-white/50 flex items-center justify-center mb-4 group-hover:bg-[#ffd200] group-hover:scale-110 group-hover:border-primary transition-all duration-300 text-white group-hover:text-black cursor-pointer" suppressHydrationWarning>
                     <span className="text-xl">↗</span>
                 </div>
-                <h3 className="text-3xl font-heading font-black text-white uppercase mb-2 tracking-tighter group-hover:text-primary transition-colors">{title}</h3>
+                <h3 className="text-3xl font-heading font-bold text-white uppercase mb-2 tracking-tighter group-hover:text-primary transition-colors">{title}</h3>
                 <p className="text-neutral-400 font-figtree text-sm max-w-[80%]">{desc}</p>
             </div>
         </div>

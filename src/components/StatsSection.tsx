@@ -2,6 +2,7 @@
 
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
+import FadeIn from "./FadeIn";
 
 const STATS = [
     { label: "Medal Win", value: 500, suffix: "+" },
@@ -15,7 +16,9 @@ export default function StatsSection() {
         <section className="py-32 bg-black text-[#ffd200] px-6 md:px-10">
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
                 {STATS.map((stat, i) => (
-                    <StatItem key={i} {...stat} />
+                    <FadeIn key={i} delay={i * 0.1}>
+                        <StatItem {...stat} />
+                    </FadeIn>
                 ))}
             </div>
         </section>
