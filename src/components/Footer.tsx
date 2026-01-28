@@ -12,9 +12,20 @@ export default function Footer() {
             <div className="relative z-10 container mx-auto px-6 md:px-10 pb-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-20">
                     <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-6 md:mb-0 w-full md:w-auto">
-                        {["Instagram", "Youtube", "Tiktok", "Github"].map((social, i) => (
-                            <a key={i} href="#" className="text-white hover:text-[#ffd200] transition-colors uppercase font-figtree text-[10px] md:text-sm border border-neutral-800 hover:border-[#ffd200] px-3 py-1 md:px-4 md:py-2 rounded-full backdrop-blur-sm">
-                                {social}
+                        {[
+                            { name: "Instagram", url: "https://www.instagram.com/onic.esports/" },
+                            { name: "Youtube", url: "https://www.youtube.com/@ONICEsports" },
+                            { name: "Tiktok", url: "https://www.tiktok.com/@onic.esports" },
+                            { name: "Github", url: "https://github.com/vyzz-xz/onicesport" },
+                        ].map((social, i) => (
+                            <a
+                                key={i}
+                                href={social.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-[#ffd200] transition-colors uppercase font-figtree text-[10px] md:text-sm border border-neutral-800 hover:border-[#ffd200] px-3 py-1 md:px-4 md:py-2 rounded-full backdrop-blur-sm"
+                            >
+                                {social.name}
                             </a>
                         ))}
                     </div>

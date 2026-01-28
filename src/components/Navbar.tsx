@@ -18,20 +18,20 @@ const MENU_ITEMS = [
 ];
 
 const NEWS = [
-    { 
-        title: "Onic Wins MPL ID S16", 
-        category: "Tournament", 
-        image: "/artifacts/onic-s16.jpg" 
+    {
+        title: "Onic Wins MPL ID S16",
+        category: "Tournament",
+        image: "/artifacts/onic-s16.jpg"
     },
-    { 
-        title: "New Jersey Launch 2026", 
-        category: "Merch", 
-        image: "/artifacts/new-jersey.jpg" 
+    {
+        title: "New Jersey Launch 2026",
+        category: "Merch",
+        image: "/artifacts/new-jersey.jpg"
     },
-    { 
-        title: "Meet & Greet Jakarta", 
-        category: "Event", 
-        image: "/artifacts/meet-greet.jpg" 
+    {
+        title: "Meet & Greet Jakarta",
+        category: "Event",
+        image: "/artifacts/meet-greet.jpg"
     },
 ];
 
@@ -67,17 +67,31 @@ export default function Navbar() {
                         {/* Left Side: Social & Contact */}
                         <div className="hidden md:flex w-1/4 border-r border-white/10 flex-col justify-between p-10">
                             <div className="mt-20">
-                                <p className="text-white font-figtree text-sm uppercase mb-4">Social <span className="text-[#ffd200]">Media</span></p>
-                                <ul className="space-y-2">
-                                    {["Instagram", "Youtube", "Tiktok"].map((s, i) => (
-                                        <li key={i}><a href="#" className="hover:text-[#ffd200] transition-colors uppercase font-bold text-lg">{s}</a></li>
+                                <p className="text-white font-figtree text-lg uppercase mb-4">Social <span className="text-[#ffd200]">Media</span></p>
+                                <ul className="space-y-3">
+                                    {[
+                                        { name: "Instagram", url: "https://www.instagram.com/onic.esports/" },
+                                        { name: "Youtube", url: "https://www.youtube.com/@ONICEsports" },
+                                        { name: "Tiktok", url: "https://www.tiktok.com/@onic.esports" },
+                                        { name: "Github", url: "https://github.com/vyzz-xz/onicesport" },
+                                    ].map((s, i) => (
+                                        <li key={i}>
+                                            <a
+                                                href={s.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:text-[#ffd200] transition-colors uppercase font-bold text-lg"
+                                            >
+                                                {s.name}
+                                            </a>
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
                         </div>
 
                         {/* Center: Navigation */}
-                        <div className="flex-1 flex flex-col justify-center px-10 md:px-20 py-20 overflow-y-auto">
+                        <div className="flex-1 flex flex-col justify-center px-10 md:px-20 py-20 overflow-y-auto [&::-webkit-scrollbar]:w-[1px] [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/10">
                             <nav className="flex flex-col gap-2">
                                 {MENU_ITEMS.map((item, i) => (
                                     <MenuItem key={i} title={item.title} i={i} />
@@ -87,7 +101,7 @@ export default function Navbar() {
 
                         {/* Right Side: News Slider */}
                         <div className="hidden md:flex w-1/4 border-l border-white/10 flex-col justify-center p-10 bg-neutral-900/20">
-                            <p className="text-white font-figtree text-sm uppercase mb-8">Latest <span className="text-[#ffd200]">Update</span></p>
+                            <p className="text-white font-figtree text-lg uppercase mb-8">Latest <span className="text-[#ffd200]">Update</span></p>
                             <Swiper
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 3000 }}

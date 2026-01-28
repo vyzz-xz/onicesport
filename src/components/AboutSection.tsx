@@ -55,12 +55,12 @@ export default function AboutSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20 w-full text-1xl md:text-xl text-justify text-white font-figtree leading-relaxed" suppressHydrationWarning>
                     <FadeIn delay={0.2}>
                         <p>
-                            A Leading Indonesian Esports organization With <span className="text-[#ffd200]">MULTIPLE CHAMPION TITLES</span> To Establish Footprint And To Be The Highest Benchmark E-sports & Sports Organization In The Region, Supported By The Relentless Energy Of Our Loyal Fanbase.
+                            A Leading indonesian Esports organization with <span className="text-[#ffd200] font-bold">MULTIPLE CHAMPION TITLES</span> to establish footprint and to be the highest benchmark E-sports & Sports Organization in the Region, Supported by the relentless energy of our loyal fanbase.
                         </p>
                     </FadeIn>
                     <FadeIn delay={0.4}>
                         <p>
-                            <span className="text-[#ffd200]">ONIC</span> was Founded in 2018, started its footstep as a professional e-sports Organization, we aim to be the best e-sports organization to represent South East Asia by managing talents and make them the best version of theirself. <span className="text-[#ffd200]">#GOONIC</span>
+                            <span className="text-[#ffd200] font-bold">ONIC</span> was Founded in 2018, started its footstep as a professional e-sports Organization, we aim to be the best e-sports organization to represent South East Asia by managing talents and make them the best version of theirself. <span className="text-[#ffd200] font-bold">#GOONIC #SONIC</span>
                         </p>
                     </FadeIn>
                 </div>

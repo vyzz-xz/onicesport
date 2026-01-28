@@ -32,7 +32,7 @@ export default function AwardsSection() {
                     <h2 className="text-5xl md:text-8xl font-figtree font-bold text-white uppercase">
                         Hall of <span className="text-[#ffd200]">Fame</span>
                     </h2>
-                    <p className="text-sm md:text-xl text-white font-figtree uppercase mt-4">Our Legacy of Victory</p>
+                    <p className="text-sm md:text-xl text-white font-figtree uppercase mt-4">Our <span className="text-[#ffd200] font-bold">Legacy</span> of <span className="text-[#ffd200] font-bold">Victory</span></p>
                 </FadeIn>
             </div>
 
@@ -55,7 +55,7 @@ export default function AwardsSection() {
                     className="w-[350px] h-[350px] md:w-[1000px] md:h-[700px]"
                 >
                     {AWARDS.map((award, i) => (
-                        <SwiperSlide key={i} className="w-[200px] md:w-[400px] bg-neutral-900 rounded-xl border border-white/10 overflow-hidden flex flex-col">
+                        <SwiperSlide key={i} className="w-[200px] md:w-[400px] bg-black rounded-xl border border-white/30 overflow-hidden flex flex-col">
                             <div className="h-2/3 bg-neutral-800 relative flex items-center justify-center group overflow-hidden">
                                 {/* Award Image */}
                                 <Image
@@ -64,11 +64,11 @@ export default function AwardsSection() {
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-90" />
                                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
-                            <div className="flex-1 p-8 flex flex-col justify-center bg-neutral-900 text-white">
-                                <span className="text-primary font-figtree text-sm">{award.year}</span>
+                            <div className="flex-1 p-8 flex flex-col justify-center bg-black text-white">
+                                <span className="text-white font-figtree text-sm">{award.year}</span>
                                 <h3 className="text-2xl font-bold font-heading uppercase">{award.title}</h3>
                                 <p className="text-white">{award.description}</p>
                             </div>
