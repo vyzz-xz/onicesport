@@ -32,7 +32,7 @@ export default function AwardsSection() {
                     <h2 className="text-5xl md:text-8xl font-figtree font-bold text-white uppercase">
                         Hall of <span className="text-[#ffd200]">Fame</span>
                     </h2>
-                    <p className="text-sm md:text-xl text-white font-figtree uppercase mt-4">Our Legacy of Victory</p>
+                    <p className="text-sm md:text-xl text-white font-figtree uppercase mt-4">Our <span className="text-[#ffd200] font-bold">Legacy</span> of <span className="text-[#ffd200] font-bold">Victory</span></p>
                 </FadeIn>
             </div>
 
@@ -70,7 +70,7 @@ export default function AwardsSection() {
                             <div className="flex-1 p-8 flex flex-col justify-center bg-neutral-900 text-white">
                                 <span className="text-primary font-figtree text-sm">{award.year}</span>
                                 <h3 className="text-2xl font-bold font-heading uppercase">{award.title}</h3>
-                                <p className="text-white">{award.description}</p>
+                                <p className="text-[#ffd200]">{award.description}</p>
                             </div>
                         </SwiperSlide>
                     ))}
