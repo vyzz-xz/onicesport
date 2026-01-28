@@ -37,7 +37,7 @@ export default function Preloader() {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-5xl md:text-9xl font-bold font-heading tracking-[-3] md:tracking-[-9] uppercase"
+                            className="text-7xl md:text-[15vw] font-bold font-heading tracking-[-3] md:tracking-[-9] uppercase"
                         >
                             Loading
                         </motion.h1>

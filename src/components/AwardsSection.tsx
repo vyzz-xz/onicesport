@@ -12,11 +12,13 @@ import Image from "next/image";
 import FadeIn from "./FadeIn";
 
 const AWARDS = [
-    { title: "MPL ID S12", description: "Champions", year: "2023", image: "/artifacts/game-ff.jpg" },
-    { title: "MSC", description: "Champions", year: "2023", image: "/artifacts/game-hok.jpg" },
-    { title: "MPL ID S11", description: "Champions", year: "2023", image: "/artifacts/game-apex.jpg" },
-    { title: "MPL I D S10", description: "Champions", year: "2022", image: "/artifacts/game-cod.jpg" },
-    { title: "M4 World Champ", description: "Runner Up", year: "2022", image: "/artifacts/game-ff.jpg" },
+    { title: "MPL ID Season 10", description: "Champions", year: "2022", image: "/artifacts/s10.jpg" },
+    { title: "MPL ID Season 11", description: "Champions", year: "2023", image: "/artifacts/season11.png" },
+    { title: "MPL ID Season 12", description: "Champions", year: "2023", image: "/artifacts/onic-s12.jpg" },
+    { title: "MPL ID Season 15", description: "Champions", year: "2025", image: "/artifacts/s15.jpg" },
+    { title: "MPL ID Season 16", description: "Champions", year: "2025", image: "/artifacts/season16.jpg" },
+    { title: "MSC Kamboja", description: "Champions", year: "2023", image: "/artifacts/msc-2023.jpg" },
+    { title: "M4 World Champ", description: "Runner Up", year: "2023", image: "/artifacts/m4.jpeg" },
 ];
 
 export default function AwardsSection() {
@@ -50,7 +52,7 @@ export default function AwardsSection() {
                     }}
                     autoplay={{ delay: 2500, disableOnInteraction: false }}
                     modules={[EffectCoverflow, Pagination, Autoplay]}
-                    className="w-[500px] h-[350px] md:w-[1000px] md:h-[700px]"
+                    className="w-[350px] h-[350px] md:w-[1000px] md:h-[700px]"
                 >
                     {AWARDS.map((award, i) => (
                         <SwiperSlide key={i} className="w-[200px] md:w-[400px] bg-neutral-900 rounded-xl border border-white/10 overflow-hidden flex flex-col">
@@ -68,7 +70,7 @@ export default function AwardsSection() {
                             <div className="flex-1 p-8 flex flex-col justify-center bg-neutral-900 text-white">
                                 <span className="text-primary font-figtree text-sm">{award.year}</span>
                                 <h3 className="text-2xl font-bold font-heading uppercase">{award.title}</h3>
-                                <p className="text-neutral-500">{award.description}</p>
+                                <p className="text-white">{award.description}</p>
                             </div>
                         </SwiperSlide>
                     ))}
