@@ -7,7 +7,7 @@ import FadeIn from "./FadeIn";
 const STATS = [
     { label: "Medal Win", value: 500, suffix: "+" },
     { label: "Championship", value: 30, suffix: "+" },
-    { label: "Total Brands", value: 30, suffix: "+" }, // Special case for prefix/suffix
+    { label: "Total Brands", value: 30, suffix: "+" },
     { label: "Years of the top", value: 6, suffix: "" },
 ];
 
@@ -29,7 +29,6 @@ function StatItem({ label, value, suffix }: { label: string, value: number, suff
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-    // Motion value for the number
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, { stiffness: 50, damping: 20, duration: 2000 });
 
@@ -39,7 +38,6 @@ function StatItem({ label, value, suffix }: { label: string, value: number, suff
         }
     }, [isInView, value, motionValue]);
 
-    // Format number for display
     return (
         <div ref={ref} className="flex flex-col items-center gap-2">
             <div className="flex items-baseline font-figtree font-bold text-5xl md:text-8xl text-primary">
@@ -55,7 +53,6 @@ function StatItem({ label, value, suffix }: { label: string, value: number, suff
 function NumberDisplay({ value }: { value: any }) {
     const ref = useRef<HTMLSpanElement>(null);
 
-    // Update text content directly for performance
     useEffect(() => {
         return value.on("change", (latest: number) => {
             if (ref.current) {
