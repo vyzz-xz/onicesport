@@ -28,9 +28,11 @@ export default function RootLayout({
           "min-h-screen bg-black font-body text-foreground antialiased selection:bg-primary selection:text-black",
           figtree.variable
         )}>
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+        <div suppressHydrationWarning className="contents">
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </div>
       </body>
     </html>
   );

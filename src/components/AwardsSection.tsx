@@ -3,7 +3,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -57,7 +56,6 @@ export default function AwardsSection() {
                     {AWARDS.map((award, i) => (
                         <SwiperSlide key={i} className="w-[200px] md:w-[400px] bg-black rounded-xl border border-white/30 overflow-hidden flex flex-col">
                             <div className="h-2/3 bg-neutral-800 relative flex items-center justify-center group overflow-hidden">
-                                {/* Award Image */}
                                 <Image
                                     src={award.image}
                                     alt={award.title}

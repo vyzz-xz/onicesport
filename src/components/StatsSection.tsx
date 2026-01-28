@@ -28,7 +28,6 @@ export default function StatsSection() {
 function StatItem({ label, value, suffix }: { label: string, value: number, suffix: string }) {
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
-
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, { stiffness: 50, damping: 20, duration: 2000 });
 
@@ -52,7 +51,6 @@ function StatItem({ label, value, suffix }: { label: string, value: number, suff
 
 function NumberDisplay({ value }: { value: any }) {
     const ref = useRef<HTMLSpanElement>(null);
-
     useEffect(() => {
         return value.on("change", (latest: number) => {
             if (ref.current) {
