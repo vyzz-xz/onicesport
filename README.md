@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Onic Esports - Scrollytelling Landing Page
 
-## Getting Started
+A high-performance "Scrollytelling" landing page concept for Onic Esports, featuring a sticky scroll-linked image sequence, premium animations, and 3D interactions. Built with **Next.js**, **Tailwind CSS v4**, and **Motion**.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Sequence Scroll**: 192-frame smooth scroll animation using HTML5 Canvas.
+- **Immersive Preloader**: Custom initial loading state with progress tracking.
+- **Split Navbar**: Premium navigation with mask-reveal hover effects and editorial news carousel.
+- **Interactive Sections**:
+  - **About**: Scroll-driven text reveal (character-by-character).
+  - **Sponsors**: Seamless infinite marquee loop.
+  - **Divisions**: Bento grid layout with 3D mouse-tracking glow borders.
+  - **Stats**: Count-up animations triggered on view.
+  - **Awards**: 3D Coverflow carousel.
+- **Responsive Design**: Mobile-optimized layout with stacked footer and touch-friendly interactions.
+- **Performance**: Lenis smooth scrolling and optimized asset loading.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation**: [Motion](https://motion.dev/) (Framer Motion)
+- **Carousel**: [Swiper](https://swiperjs.com/)
+- **Fonts**: Figtree Font (via `next/font`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Getting Started
 
-## Learn More
+1.  **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/vyzz-xz/onicesport.git
+    cd onicesport
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Run the development server:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Open the project:**
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## ⚠️ Disclaimer
+
+This project is a fan-made concept created solely for learning and demonstration purposes. It is **not affiliated with, endorsed by, or connected to** the real Onic Esports organization. All logos and trademarks belong to their respective owners.
+
+Designed By Muhamad Hafiz
